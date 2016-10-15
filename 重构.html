@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>页面重构</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="test.css">
+</head>
+<body>
+
+	<div id="header">
+		<h1 align="center">基于STFT的室内定位Web仿真系统</h1>
+	</div>
+
+	<div id="content">
+		<div id="sidebar">
+
+			<ul>
+				<li> <a href="./重构.html">首页</a></li>
+				<li> <a href="./spectrum.html">定位仿真</a> </li>
+				<li> <a href="./time.html">时域分析</a></li>
+			</ul>
+			
+		</div>
+
+		<div id="main">
+
+			<div id="first">
+				<div id="first-left">
+					<div id="btn">
+					<button id="btn1" onclick="Play()">Play</button>
+					<button id="btn2" onclick="Stop()">Stop</button><br/>
+					</div>
+
+					<table cellspacing="10" id="table">
+						<tr>
+					<td>频域/时域 : </td>
+					<td>
+						<select id="mode" onchange="Setup()">
+						<option>Frequency</option>
+						<option>TimeDomain</option>
+						</select>
+					</td>
+						</tr>
+
+						<tr>
+					<td>滤波时间常数 : </td>
+					<td>
+						<input type="text" id="smoothing" value="0.9" onchange="Setup()"/>
+					</td>
+						</tr>
+
+						<tr>
+					<td>WAV文件选择 : </td>
+					<td>
+						<select id="fileMode" onchange="FileChange()">
+	
+						<option>4K0s_10s_10K</option>
+						<option>1K0s_10s_10K</option>
+						<option>1K0s_3K8s_10s_7K</option>
+						<option>1K0s_3K8s_10s_8K</option>
+						<option>1K0s_2K5s_4K8s_10s_10K</option>
+						<option>1K0s_2K5s_4K8s_10s_12K</option>
+						
+		
+						</select>
+					</td>
+						</tr>
+
+						<tr>
+					<td>窗长选择 : </td>
+					<td>
+						<select id="fftSizeMode" onchange="Setup()">
+						<option>512</option>
+						<option>1024</option>
+						<option>2048</option>
+						</select>
+					</td>
+						</tr>
+
+						<tr>
+					<td>最小分贝 : </td>
+					<td><input type="text" id="min" onchange="Setup()"/></td>
+						</tr>
+
+						<tr>
+					<td>最大分贝 : </td>
+					<td><input type="text" id="max" onchange="Setup()"/></td>
+						</tr>
+					</table>
+					
+				</div>
+
+				<div id="first-right">
+					<canvas id="graph" width=256 height=256></canvas>
+				</div>
+
+				<div id="first-center">
+					<div id="display">
+						<ul >
+							<li id="pos1Value">信号0 (0 ,0)</li>
+							<li id="pos2Value"></li>
+							<li id="pos3Value"></li>
+						</ul>
+					</div>
+
+					<div id="timeDisplay">
+						<ul>
+							<li id="time1">信号1 0</li>
+							<li id="time2"></li>
+							<li id="time3"></li>
+						</ul>
+					</div>
+				</div>
+				
+			</div>
+
+			<div id="second">
+				<div>
+					<div class="signal">
+						<div class="signalDetail">信号1  频率：<input type="text" class="freq" id="freq1"> <span id="freqDetail1"> </span></div>
+					    <div class="five">
+						    <div class="part1" id="five1"></div>
+					        <div class="part2" id="fiveTime1"></div>
+					    </div>
+					</div>
+
+					<div class="signal">
+						<div class="signalDetail">信号2  频率：<input type="text" class="freq" id="freq2"> <span id="freqDetail2"></span> </div>
+						<div class="five">
+						    <div class="part1"  id="five2"></div>
+					        <div class="part2" id="fiveTime2"></div>
+					    </div>
+					</div>
+
+					<div class="signal">
+						<p class="signalDetail">信号3  频率：<input type="text" class="freq" id="freq3"> <span id="freqDetail3"></span></p>
+						<div class="five">
+						    <div class="part1" id="five3"></div>
+					        <div class="part2" id="fiveTime3"></div>
+					    </div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		
+	</div>
+
+	<script type="text/javascript" src="waapisim.js"></script>
+	<script type="text/javascript" src="index.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,123 @@
+
+
+#header {
+	padding: 15px 0 15px 15px;
+	margin: 10px auto;
+	height: 80px;
+	border: 3px solid #ccccff;
+}
+
+#main {
+	margin-left: 200px;
+	width: auto;
+	height: 800px;
+	border: 3px solid #124554;
+	}
+	#first {
+		width: auto;
+		margin-top: 10px;
+		margin-bottom: 10px;
+		height: 330px;
+		border: 3px solid #683728;
+		}
+		#first-left{
+			width: 400px;
+			height: 330px;
+			float: left;
+			border: 2px solid #547568;
+			}
+			#btn1, #btn2{
+				width: 100px;
+				height: 40px;
+				background: #b3e4ff;
+				margin: 20px 20px;
+				font-size: 150%;
+				border-radius: 5px;
+			}
+			#table{
+				background: #ffcc66
+			}
+
+		#first-right{
+			width: 300px;
+			height: 330px;
+			float: right;
+			border: 2px solid #866521;
+			}
+			#graph{
+				margin: 30px 25px;
+			}
+
+		#first-center{
+			width: auto;
+			height: 330px;
+
+			border: 2px solid red;
+			margin: 0 310px 0 410px;
+			}
+			#first-center ul {
+				list-style: none;
+			}
+			#first-center ul li{
+				margin: 20px 10px;
+			}
+			#first-center ul li a{
+				text-decoration: none;
+			}
+
+
+	#second {
+		width: auto;
+		height: 430px;
+		border: 3px solid #179271;	
+		}
+		.freq {
+			width: 50px;
+		}
+		.signal{
+			/*padding: 20px;*/
+			margin-bottom: 10px; 
+			border: 2px solid #456371;
+			}
+			.signalDetail{
+				width: 250px;
+				height: 120px;
+				float: left;
+			}
+			.five{
+				margin-left: 280px;
+				height: 120px;
+				width: auto;
+				border: 2px solid #478954;
+				}
+				.part1{
+					height: 40px;
+					width: auto;
+					border: 2px solid #764271;
+					overflow: auto;
+				}
+				.part2{
+					height: 80px;
+					width: auto;
+					border: 2px solid #764271;
+					overflow: auto;
+				}
+
+#sidebar {
+	width: 180px;
+	float: left;
+	height: 500px; 
+	border: 3px solid #245212;
+	padding: 0 0 0 15px;
+	}
+	#sidebar ul {
+		list-style: none;
+	}
+	#sidebar ul li{
+		margin: 20px 10px;
+	}
+	#sidebar ul li a{
+		text-decoration: none;
+	}
+
+	
